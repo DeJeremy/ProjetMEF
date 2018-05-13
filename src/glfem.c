@@ -9,6 +9,7 @@
 
 #include "glfem.h"
 
+// ======================== DEVOIR 5 ===============================
 
 void glMakeRasterFont(void);
 void getColor(double value, int numberOfColors, float* R, float* G, float* B);
@@ -461,4 +462,28 @@ void glfemPlotBnd(femEdges *theEdges)
     glEnd();
 }
 
+
+// =================================== DEVOIR 4 ====================================
+
+void glfemDrawCircle(double x, double y,double r)
+{
+    int i;
+    int n = 500;
+    glBegin(GL_LINE_STRIP);
+    for(i = 0; i < n; i++) {
+        glVertex2f(r*cos(2*3.14159*i/n)+x,r*sin(2*3.14159*i/n)+y); }
+    glVertex2f(r*cos(2*3.14159*0/n)+x,r*sin(2*3.14159*0/n)+y);
+    glEnd();
+}
+
+void glfemDrawDisk(double x, double y, double r)
+{
+    int i;
+    int n = 100;
+    glBegin(GL_POLYGON);
+    for(i = 0; i < n; i++) {
+        glVertex2f(r*cos(2*3.14159*i/n)+x,r*sin(2*3.14159*i/n)+y); }
+    glVertex2f(r*cos(2*3.14159*0/n)+x,r*sin(2*3.14159*0/n)+y);
+    glEnd();
+}
 

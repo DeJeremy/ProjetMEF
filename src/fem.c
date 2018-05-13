@@ -953,24 +953,6 @@ void femGrainsFree(femGrains *theGrains)
     free(theGrains);
 }
 
-double femMin(double *x, int n) 
-{
-    double myMin = x[0];
-    int i;
-    for (i=1 ;i < n; i++) 
-        myMin = fmin(myMin,x[i]);
-    return myMin;
-}
-
-double femMax(double *x, int n)
-{
-    double myMax = x[0];
-    int i;
-    for (i=1 ;i < n; i++) 
-        myMax = fmax(myMax,x[i]);
-    return myMax;
-}
-
 // ========================================= COMMUN =======================================================
 
 void femError(char *text, int line, char *file)                                  

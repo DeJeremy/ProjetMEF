@@ -18,7 +18,7 @@
 
 #include "fem.h"
 
-
+// ======================================== DEVOIR 5 ============================
 void        glfemDrawColorElement(float *x, float *y, double *u, int n);
 void 		glfemDrawElement(float *x, float *y, int n);
 void 		glfemDrawNodes(double* x, double* y,int n);
@@ -36,5 +36,10 @@ void 		glfemMessage(char *message);
 void 		glfemDrawMessage(int h, int v, char *message);
 void 		glfemSetRasterSize(int width, int height);
 GLFWwindow* glfemInit(char *windowName);
+
+// ====================================== DEVOIR 4 ======================================
+
+void        glfemDrawCircle(double x, double y,double r);
+void        glfemDrawDisk(double x, double y, double r);
 
 #endif

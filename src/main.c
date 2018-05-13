@@ -22,18 +22,30 @@ int main(void)
     
     femSolverType solverType = FEM_BAND;
     femRenumType  renumType  = FEM_NO;
-    char meshFileName[] = "../data/triangles_6315.txt";   
+
+    // chargement du maillage
+    char meshFileName[] = "../data/meca1120-projet-meshMedium.txt";   
     
+    // initialisation du problème
     femDiffusionProblem* theProblem = femDiffusionCreate(meshFileName,solverType,renumType);
+
+
     clock_t tic = clock();
-    femDiffusionCompute(theProblem);  
+
+    // résolution du problème
+    femDiffusionCompute(theProblem);
+
+    // print des infos sur le maillage - inutile dans le projet
     femSolverPrintInfos(theProblem->solver);
+
+
     printf("    CPU time : %.2f [sec] \n", (clock() - tic) * 1.0 /CLOCKS_PER_SEC);
     printf("    Maximum value : %.4f\n", femMax(theProblem->soluce,theProblem->size));
     fflush(stdout);
     
 
-    int option = 1;    
+    int option = 1;
+    // Récupération si changemetn de type de solveur
     femSolverType newSolverType = solverType;
     femRenumType  newRenumType  = renumType;
 

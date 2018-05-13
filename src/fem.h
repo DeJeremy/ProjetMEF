@@ -206,12 +206,6 @@ void        femGrainsFree(femGrains *myGrains);
 void        femGrainsUpdate(femGrains *myGrains, double dt, double tol, double iterMax);
 double      femGrainsContactIterate(femGrains *myGrains, double dt, int iter); 
 
-double      femMin(double *x, int n);
-double      femMax(double *x, int n);
-void        femError(char *text, int line, char *file);
-void        femErrorScan(int test, int line, char *file);
-void        femWarning(char *text, int line, char *file);
-
 // ============================= FIN DEVOIR 4 ======================================================
 
 
