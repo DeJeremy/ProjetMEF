@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/myFem.dir/src/fem.c.o CMakeFiles/myFem.dir/src/glfem.c.o CMakeFiles/myFem.dir/src/homework.c.o CMakeFiles/myFem.dir/src/main.c.o  -o myFem glfw-3.2.1/src/libglfw3.a -framework OpenGL -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo 
