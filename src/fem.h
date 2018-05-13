@@ -22,7 +22,7 @@
 #define FALSE 0 
 #define TRUE  1
 
-
+// ======================================= START DEVOIR 5 =========================================================
 
 typedef enum {FEM_TRIANGLE,FEM_QUAD} femElementType;
 typedef enum {FEM_FULL,FEM_BAND,FEM_ITER} femSolverType;
@@ -180,5 +180,39 @@ double               femMax(double *x, int n);
 void                 femError(char *text, int line, char *file);
 void                 femErrorScan(int test, int line, char *file);
 void                 femWarning(char *text, int line, char *file);
+
+// =============================== FIN DEVOIR 5 / START DEVOIR 4 ====================================
+
+typedef struct {
+    int n;
+    double radiusIn;
+    double radiusOut;
+    double gravity[2];
+    double gamma;
+    double *x;
+    double *y;
+    double *vx;
+    double *vy;
+    double *r;
+    double *m;
+    double *dvBoundary;
+    double *dvContacts;
+} femGrains;
+
+
+femGrains  *femGrainsCreateSimple(int n, double r, double m, double radiusIn, double radiusOut);
+femGrains  *femGrainsCreateTiny(double radiusIn, double radiusOut);
+void        femGrainsFree(femGrains *myGrains);
+void        femGrainsUpdate(femGrains *myGrains, double dt, double tol, double iterMax);
+double      femGrainsContactIterate(femGrains *myGrains, double dt, int iter); 
+
+double      femMin(double *x, int n);
+double      femMax(double *x, int n);
+void        femError(char *text, int line, char *file);
+void        femErrorScan(int test, int line, char *file);
+void        femWarning(char *text, int line, char *file);
+
+// ============================= FIN DEVOIR 4 ======================================================
+
 
 #endif

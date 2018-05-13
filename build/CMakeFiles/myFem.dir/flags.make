@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = -Dgraphic
 
-C_INCLUDES = -I"/Users/jeremy/Documents/Louvain/Q4/Elements finis/Devoirs/Devoir5/myFem-BandSolver/glfw-3.2.1/include" 
+C_INCLUDES = -I"/Users/jeremy/Documents/Louvain/Q4/Elements finis/ProjetMEF/PROJET/glfw-3.2.1/include" 
 

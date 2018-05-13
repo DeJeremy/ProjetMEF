@@ -6,7 +6,7 @@ C_FLAGS = -fPIC   -Wall
 
 C_DEFINES = -D_GLFW_USE_CONFIG_H
 
-C_INCLUDES = -I"/Users/jeremy/Documents/Louvain/Q4/Elements finis/Devoirs/Devoir5/myFem-BandSolver/glfw-3.2.1/include" -I"/Users/jeremy/Documents/Louvain/Q4/Elements finis/Devoirs/Devoir5/myFem-BandSolver/glfw-3.2.1/src" -I"/Users/jeremy/Documents/Louvain/Q4/Elements finis/Devoirs/Devoir5/myFem-BandSolver/build/glfw-3.2.1/src" 
+C_INCLUDES = -I"/Users/jeremy/Documents/Louvain/Q4/Elements finis/ProjetMEF/PROJET/glfw-3.2.1/include" -I"/Users/jeremy/Documents/Louvain/Q4/Elements finis/ProjetMEF/PROJET/glfw-3.2.1/src" -I"/Users/jeremy/Documents/Louvain/Q4/Elements finis/ProjetMEF/PROJET/build/glfw-3.2.1/src" 
 
 # Custom flags: glfw-3.2.1/src/CMakeFiles/glfw.dir/context.c.o_FLAGS = -Wdeclaration-after-statement
 
